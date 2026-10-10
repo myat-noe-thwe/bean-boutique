@@ -1230,3 +1230,22 @@ footer {
         align-items: center;
     }
 }
+@media screen and (max-width: 768px) {
+    .modal-content, .welcome-modal {
+        width: 90% !important;
+        max-width: 90% !important;
+        padding: 20px !important;
+        margin: 10% auto !important;
+    }
+
+    .main-top-section {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+        padding: 30px 15px;
+    }
+
+    .coffee-grid, .equipment-grid, .favorites-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px;
+    }
+}
