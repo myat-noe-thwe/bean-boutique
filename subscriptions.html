@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean Boutique - Subscriptions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+        <img src="Image/logo.jpg" alt="Coffee Logo" style="width: 35px; height: 35px; object-fit: contain;">
+        <span>Bean Boutique</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coffee.html">Coffee Selection</a></li>
+                <li><a href="equipment.html">Brewing Equipment</a></li>
+                <li><a href="cart.html">Shopping Cart</a></li>
+                <li><a href="events.html">Events & Workshops</a></li>
+                <li><a href="subscriptions.html" class="active">Subscriptions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="subs-split-banner">
+        <div class="subs-split-container">
+            <div class="subs-split-text">
+                <span class="subs-badge-pill"><i class="fas fa-box-open"></i> AUTOMATED DELIVERY</span>
+                <h1>Fresh Coffee, Delivered Monthly</h1>
+                <p>Never run out of your favorite brew. Select a customized plan and get freshly roasted beans delivered straight to your door with zero hassle.</p>
+                <div class="subs-perks-row">
+                    <span><i class="fas fa-check-circle"></i> Free Shipping</span>
+                    <span><i class="fas fa-check-circle"></i> Cancel Anytime</span>
+                    <span><i class="fas fa-check-circle"></i> Expertly Curated</span>
+                </div>
+            </div>
+            <div class="subs-split-graphic">
+                <div class="subs-graphic-box">
+                    <i class="fas fa-mug-hot"></i>
+                    <span>Fresh & Tailored</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content-wrapper">
+        <section class="section-block">
+            <div class="section-title-row">
+                <h2>Choose Your Monthly Plan</h2>
+                <span>Flexible and pause anytime</span>
+            </div>
+            
+            <!-- Pricing Cards Grid -->
+            <div class="subs-pricing-grid">
+                
+                <!-- Plan 1 -->
+                <div class="subs-card">
+                    <div class="subs-card-icon">🌱</div>
+                    <h3>Explorer Plan</h3>
+                    <p class="subs-plan-desc">Great for single coffee drinkers looking to try new single-origin beans.</p>
+                    <div class="subs-price-box">
+                        <span class="subs-currency">$</span>18.00 <span class="subs-duration">/month</span>
+                    </div>
+                    <ul class="subs-features-list">
+                        <li><i class="fas fa-check"></i> 1 Bag / Month (250g)</li>
+                        <li><i class="fas fa-check"></i> Free Standard Shipping</li>
+                        <li><i class="fas fa-check"></i> Cancel Anytime</li>
+                    </ul>
+                    <button class="subs-btn" onclick="subscribePlan('Explorer Plan (Monthly)', 18.00)">Select Plan</button>
+                </div>
+
+                <!-- Plan 2 (Highlighted / Most Popular) -->
+                <div class="subs-card subs-card-featured">
+                    <div class="subs-top-badge">Most Popular</div>
+                    <div class="subs-card-icon">⭐</div>
+                    <h3>Connoisseur Plan</h3>
+                    <p class="subs-plan-desc">Our most popular plan. Enjoy a mix of signature blends and rare origins.</p>
+                    <div class="subs-price-box">
+                        <span class="subs-currency">$</span>32.00 <span class="subs-duration">/month</span>
+                    </div>
+                    <ul class="subs-features-list">
+                        <li><i class="fas fa-check"></i> 2 Bags / Month (500g total)</li>
+                        <li><i class="fas fa-check"></i> Priority Free Shipping</li>
+                        <li><i class="fas fa-check"></i> Exclusive Member Perks</li>
+                        <li><i class="fas fa-check"></i> Cancel Anytime</li>
+                    </ul>
+                    <button class="subs-btn subs-btn-featured" onclick="subscribePlan('Connoisseur Plan (Monthly)', 32.00)">Select Plan</button>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="subs-card">
+                    <div class="subs-card-icon">👑</div>
+                    <h3>Office & Family</h3>
+                    <p class="subs-plan-desc">Ideal for heavy coffee lovers, families, or small office teams.</p>
+                    <div class="subs-price-box">
+                        <span class="subs-currency">$</span>58.00 <span class="subs-duration">/month</span>
+                    </div>
+                    <ul class="subs-features-list">
+                        <li><i class="fas fa-check"></i> 4 Bags / Month (1kg total)</li>
+                        <li><i class="fas fa-check"></i> Express Free Shipping</li>
+                        <li><i class="fas fa-check"></i> Dedicated Support</li>
+                        <li><i class="fas fa-check"></i> Cancel Anytime</li>
+                    </ul>
+                    <button class="subs-btn" onclick="subscribePlan('Office & Family Plan (Monthly)', 58.00)">Select Plan</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-brand">Bean Boutique</div>
+                <p class="footer-desc">Great coffee, good vibes and memorable moments. Brewed just for you.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="coffee.html">Menu</a></li>
+                    <li><a href="subscriptions.html">Our Story</a></li>
+                    <li><a href="events.html">Locations</a></li>
+                    <li><a href="cart.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Information</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Franchise</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Support</h4>
+                <p>+1 (123) 456-7890</p>
+                <p>hello@beanboutique.com</p>
+                <p>Mon - Sun: 7:00 AM - 9:00 PM</p>
+            </div>
+            <div class="footer-col">
+                <h4>Download Our App</h4>
+                <div class="app-badges">
+                    <div class="app-badge">App Store</div>
+                    <div class="app-badge">Google Play</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <p>&copy; 2026 Bean Boutique Coffee Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function subscribePlan(planName, planPrice) {
+            let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+            cart.push({ name: planName, price: planPrice, quantity: 1 });
+            localStorage.setItem('cartItems', JSON.stringify(cart));
+            alert(planName + ' added to your cart!');
+            window.location.href = 'cart.html';
+        }
+    </script>
+
+</body>
+</html>

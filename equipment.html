@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean Boutique - Brewing Equipment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+        <img src="Image/logo.jpg" alt="Coffee Logo" style="width: 35px; height: 35px; object-fit: contain;">
+        <span>Bean Boutique</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coffee.html">Coffee Selection</a></li>
+                <li><a href="equipment.html" class="active">Brewing Equipment</a></li>
+                <li><a href="cart.html">Shopping Cart</a></li>
+                <li><a href="events.html">Events & Workshops</a></li>
+                <li><a href="subscriptions.html">Subscriptions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main-top-section">
+        <div class="main-image-side">
+            <img src="Image/Brewing equipment main.jpg" alt="Brewing Equipment Hero">
+        </div>
+        <div class="main-text-side">
+            <span class="sub-title">PROFESSIONAL GEAR</span>
+            <h1>Brewing Equipment</h1>
+            <p>Discover pro-grade coffee makers, grinders, and accessories to brew the perfect cup right at home.</p>
+        </div>
+    </section>
+
+    <main class="main-content-wrapper">
+        <section class="section-block">
+            <div class="section-title-row">
+                <h2>Featured Equipment</h2>
+                <span>Explore all items</span>
+            </div>
+            <div class="products-row equipment-grid">
+                <!-- Equipment Item 1 -->
+                <div class="item-card" data-price="125.00">
+                    <img src="Image/Brewing V60 Pour-Over Kit.jpg" alt="V60 Dripper Set">
+                    <div class="coffee-details">
+                        <h3>V60 Pour-Over Kit</h3>
+                        <p class="coffee-region">Manual Brewing</p>
+                        <p class="coffee-notes">Includes glass server, dripper, and paper filters.</p>
+                        <div class="coffee-meta">
+                            <span class="roast-level">In Stock</span>
+                            <span class="coffee-weight">Kit</span>
+                        </div>
+                        <div class="price-action">
+                            <span class="price-tag">$45.00</span>
+                            <button class="add-circle-btn" onclick="addToCart('V60 Pour-Over Kit', 45.00)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Equipment Item 2 -->
+                <div class="item-card" data-price="150.00">
+                    <img src="Image/Brewing V6Artisan Burr Grinder.jpg" alt="Coffee Grinder">
+                    <div class="coffee-details">
+                        <h3>Artisan Burr Grinder</h3>
+                        <p class="coffee-region">Grinding Gear</p>
+                        <p class="coffee-notes">Precision conical burrs for consistent coffee grounds.</p>
+                        <div class="coffee-meta">
+                            <span class="roast-level">In Stock</span>
+                            <span class="coffee-weight">1 Unit</span>
+                        </div>
+                        <div class="price-action">
+                            <span class="price-tag">$125.00</span>
+                            <button class="add-circle-btn" onclick="addToCart('Artisan Burr Grinder', 125.00)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Equipment Item 3 -->
+                <div class="item-card" data-price="85.00">
+                    <img src="Image/Brewing Classic French Press.jpg" alt="French Press">
+                    <div class="coffee-details">
+                        <h3>Classic French Press</h3>
+                        <p>Immersion Brewing</p>
+                        <p class="coffee-notes">Heat-resistant borosilicate glass with stainless steel frame.</p>
+                        <div class="coffee-meta">
+                            <span class="roast-level">In Stock</span>
+                            <span class="coffee-weight">800ml</span>
+                        </div>
+                        <div class="price-action">
+                            <span class="price-tag">$35.00</span>
+                            <button class="add-circle-btn" onclick="addToCart('Classic French Press', 35.00)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-brand">Bean Boutique</div>
+                <p class="footer-desc">Great coffee, good vibes and memorable moments. Brewed just for you.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="coffee.html">Menu</a></li>
+                    <li><a href="subscriptions.html">Our Story</a></li>
+                    <li><a href="events.html">Locations</a></li>
+                    <li><a href="cart.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Information</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Franchise</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Support</h4>
+                <p>+1 (123) 456-7890</p>
+                <p>hello@beanboutique.com</p>
+                <p>Mon - Sun: 7:00 AM - 9:00 PM</p>
+            </div>
+            <div class="footer-col">
+                <h4>Download Our App</h4>
+                <div class="app-badges">
+                    <div class="app-badge">App Store</div>
+                    <div class="app-badge">Google Play</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <p>&copy; 2026 Bean Boutique Coffee Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function addToCart(itemName, itemPrice) {
+            let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+            cart.push({ name: itemName, price: itemPrice, quantity: 1 });
+            localStorage.setItem('cartItems', JSON.stringify(cart));
+            window.location.href = 'cart.html';
+        }
+    </script>
+</body>
+</html>

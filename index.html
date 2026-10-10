@@ -1,0 +1,292 @@
+<html>
+    <head>
+        <title>Bean Boutique - Home</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+        
+    <body>
+        <header>
+        <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+        <img src="Image/logo.jpg" alt="Coffee Logo" style="width: 35px; height: 35px; object-fit: contain;">
+        <span>Bean Boutique</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="coffee.html">Coffee Selection</a></li>
+                <li><a href="equipment.html">Brewing Equipment</a></li>
+                <li><a href="cart.html">Shopping Cart</a></li>
+                <li><a href="events.html">Events & Workshops</a></li>
+                <li><a href="subscriptions.html">Subscriptions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main-top-section-bg" style="background-image: url(Image/Home\ page\ main.jpg);">
+        <div class="hero-content-box">
+            <span class="sub-title">PREMIUM COFFEE & MORE</span>
+            <h1>Sip the warmth,<br>share the community</h1>
+            <p>At Bean Boutique, we serve more than just coffee – we serve moments, fresh brews, cozy vibes, and a place to be yourself.</p>
+            <div class="main-btn-group">
+                <a href="coffee.html" class="btn-primary">View Menu &rarr;</a>
+            </div>
+            
+            <div class="feature-icons-row">
+                <div class="f-item">
+                    <span>☕</span>
+                    <p>Fresh Beans</p>
+                </div>
+                <div class="f-item">
+                    <span>🔥</span>
+                    <p>Premium Taste</p>
+                </div>
+                <div class="f-item">
+                    <span>❤️</span>
+                    <p>Cozy Space</p>
+                </div>
+                <div class="f-item">
+                    <span>🌱</span>
+                    <p>Eco Friendly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content-wrapper">
+        <!-- Customer Favorites -->
+        <section class="section-block">
+            <div class="section-title-row">
+                <h2>Customer Favorites</h2>
+                <a href="coffee.html" class="view-all-link">View Full Menu &rarr;</a>
+            </div>
+            <div class="products-row">
+                <div class="item-card">
+                    <img src="Image/Cappuccino.avif" alt="Cappuccino">
+                    <h3>Cappuccino</h3>
+                    <p class="item-desc">Classic cappuccino with a perfect foam.</p>
+                    <div class="price-action">
+                        <span class="price-tag">$4.25</span>
+                        <button class="add-circle-btn" onclick="addToCart('Cappuccino', 4.25)">+</button>
+                    </div>
+                </div>
+                <div class="item-card">
+                    <img src="Image/Ice Latte.jpg" alt="Iced Latte">
+                    <h3>Iced Latte</h3>
+                    <p class="item-desc">Smooth espresso with cold milk over ice.</p>
+                    <div class="price-action">
+                        <span class="price-tag">$4.75</span>
+                        <button class="add-circle-btn" onclick="addToCart('Iced Latte', 4.75)">+</button>
+                    </div>
+                </div>
+                <div class="item-card">
+                    <img src="Image/mocha.jpg" alt="Mocha">
+                    <h3>Mocha</h3>
+                    <p class="item-desc">Rich chocolate with espresso and milk.</p>
+                    <div class="price-action">
+                        <span class="price-tag">$4.95</span>
+                        <button class="add-circle-btn" onclick="addToCart('Mocha', 4.95)">+</button>
+                    </div>
+                </div>
+                <div class="item-card">
+                    <img src="Image/expresso.jpg" alt="Espresso">
+                    <h3>Espresso</h3>
+                    <p class="item-desc">Strong, bold and full of flavor.</p>
+                    <div class="price-action">
+                        <span class="price-tag">$3.25</span>
+                        <button class="add-circle-btn" onclick="addToCart('Espresso', 3.25)">+</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+          <section class="story-split-section">
+            <div class="story-text-side">
+                <span class="sub-title">OUR STORY</span>
+                <h2>More Than Just Coffee</h2>
+                <p>Bean Boutique was born out of a simple passion for great coffee and meaningful connections. From carefully selected beans to your favorite cup, we're here to make every moment special.</p>
+                <a href="events.html" class="btn-primary" style="margin-top: 15px; display: inline-block;">Learn More About Us</a>
+            </div>
+            <div class="story-image-side">
+                <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80" alt="Coffee Shop Bar">
+            </div>
+        </section>
+
+        <section class="section-block">
+            <div class="section-title-row">
+                <h2>Our Coffee Houses</h2>
+                <a href="subscriptions.html" class="view-all-link">View All Locations &rarr;</a>
+            </div>
+            <div class="locations-row">
+                <div class="location-card">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80" alt="New York">
+                    <div class="loc-details">
+                        <h4>New York, USA</h4>
+                        <p>123 Coffee Street, New York, NY 10001</p>
+                        <p class="loc-time">Mon - Sun: 7:00 AM - 9:00 PM</p>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80" alt="San Francisco">
+                    <div class="loc-details">
+                        <h4>San Francisco, USA</h4>
+                        <p>456 Brewista Avenue, San Francisco, CA 94102</p>
+                        <p class="loc-time">Mon - Sun: 7:00 AM - 9:00 PM</p>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Los Angeles">
+                    <div class="loc-details">
+                        <h4>Los Angeles, USA</h4>
+                        <p>789 Latte Lane, Los Angeles, CA 90001</p>
+                        <p class="loc-time">Mon - Sun: 7:00 AM - 9:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            <section class="section-block">
+            <div class="section-title-row">
+                <span class="sub-title" style="margin:0;">WHAT OUR CUSTOMERS SAY</span>
+                <h2>Loved by Coffee Lovers</h2>
+            </div>
+            <div class="testimonials-row">
+                <div class="testimonial-card">
+                    <p class="testi-text">"The best coffee I've ever had! The quality and taste are simply amazing."</p>
+                    <div class="testi-author">
+                        <div>
+                            <strong>Sophia Williams</strong>
+                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testi-text">"Cozy place, friendly atmosphere, and the coffee is just perfect!"</p>
+                    <div class="testi-author">
+                        <div>
+                            <strong>James Anderson</strong>
+                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testi-text">"I come here every weekend. Bean Boutique is my happy place!"</p>
+                    <div class="testi-author">
+                        <div>
+                            <strong>Olivia Brown</strong>
+                            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter-banner">
+            <div class="newsletter-left">
+                <span class="icon-coffee">☕</span>
+                <div>
+                    <h3>Stay in the Loop</h3>
+                    <p>Subscribe to get updates on new blends, offers and coffee tips!</p>
+                </div>
+            </div>
+            <div class="newsletter-right">
+                <input type="email" placeholder="Enter your email">
+                <button>Subscribe</button>
+            </div>
+        </section>
+    </main>
+    <div id="welcomeModal" class="modal-overlay">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Welcome to Bean Boutique! ☕</h2>
+        <p>Get <strong>15% OFF</strong> on your first coffee purchase. Sign up with your email below to claim your discount code.</p>
+        <form id="signupForm" onsubmit="handleSignup(event)">
+            <input type="email" placeholder="Enter your email address..." required>
+            <button type="submit" class="btn-primary">Claim My Discount</button>
+        </form>
+    </div>
+</div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-brand">Bean Boutique</div>
+                <p class="footer-desc">Great coffee, good vibes and memorable moments. Brewed just for you.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="coffee.html">Menu</a></li>
+                    <li><a href="subscriptions.html">Our Story</a></li>
+                    <li><a href="events.html">Locations</a></li>
+                    <li><a href="cart.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Information</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Franchise</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Support</h4>
+                <p>+1 (123) 456-7890</p>
+                <p>hello@beanboutique.com</p>
+                <p>Mon - Sun: 7:00 AM - 9:00 PM</p>
+            </div>
+            <div class="footer-col">
+                <h4>Download Our App</h4>
+                <div class="app-badges">
+                    <div class="app-badge">App Store</div>
+                    <div class="app-badge">Google Play</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <p>&copy; 2026 Bean Boutique Coffee Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function addToCart(itemName, itemPrice) {
+            let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+            cart.push({ name: itemName, price: itemPrice, quantity: 1 });
+            localStorage.setItem('cartItems', JSON.stringify(cart));
+            window.location.href = 'cart.html';
+        }
+window.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('welcomeModal');
+    const closeBtn = document.querySelector('.close-modal');
+
+    if (!localStorage.getItem('visitedBefore')) {
+        setTimeout(() => {
+            modal.style.display = 'flex';
+        }, 1000);
+    }
+
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+        localStorage.setItem('visitedBefore', 'true');
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            localStorage.setItem('visitedBefore', 'true');
+        }
+    });
+});
+
+function handleSignup(e) {
+    e.preventDefault();
+    alert('Thank you for signing up! Your 15% discount code has been sent to your email.');
+    document.getElementById('welcomeModal').style.display = 'none';
+    localStorage.setItem('visitedBefore', 'true');
+}
+    </script>
+    </body>
+</html>

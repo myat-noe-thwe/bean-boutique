@@ -1,0 +1,173 @@
+<html>
+    <head>
+        <title>Bean Boutique - Shopping Cart</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+    <body>
+        <header>
+        <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+        <img src="Image/logo.jpg" alt="Coffee Logo" style="width: 35px; height: 35px; object-fit: contain;">
+        <span>Bean Boutique</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coffee.html">Coffee Selection</a></li>
+                <li><a href="equipment.html">Brewing Equipment</a></li>
+                <li><a href="cart.html" class="active">Shopping Cart</a></li>
+                <li><a href="events.html">Events & Workshops</a></li>
+                <li><a href="subscriptions.html">Subscriptions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main-top-section">
+        <div class="main-text-side">
+            <span class="sub-title">YOUR SELECTIONS</span>
+            <h1>Your Shopping Cart</h1>
+            <p>Review your selected coffee beans and equipment before proceeding to checkout.</p>
+        </div>
+        <div class="main-image-side">
+            <img src="Image/shopping cart.jpg" alt="Brewing Equipment Hero">
+        </div>
+    </section>
+
+    <main class="main-content-wrapper">
+        <section class="section-block">
+            <div class="cart-container" style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px;">
+                <!-- Cart Items List -->
+                <div class="cart-items-list">
+                    <h2 style="margin-bottom: 20px; color: #0d47a1;">Cart Items</h2>
+                    <div id="cartItemsContainer">
+                        <!-- JavaScript will inject items here -->
+                    </div>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary" style="background-color: #f4fbfd; border: 1px solid #bbdefb; padding: 25px; border-radius: 12px; height: fit-content;">
+                    <h3 style="color: #0d47a1; margin-bottom: 15px;">Order Summary</h3>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 14px; color: #546e7a;">
+                        <span>Subtotal</span>
+                        <span id="cartSubtotal">$0.00</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 14px; color: #546e7a;">
+                        <span>Shipping</span>
+                        <span>Free</span>
+                    </div>
+                    <hr style="border: 0; border-top: 1px solid #bbdefb; margin-bottom: 15px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 20px; font-size: 18px; font-weight: bold; color: #0d47a1;">
+                        <span>Total</span>
+                        <span id="cartTotal">$0.00</span>
+                    </div>
+                    <button onclick="checkout()" class="btn-primary" style="width: 100%; text-align: center; border: none; cursor: pointer;">Proceed to Checkout</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-brand">Bean Boutique</div>
+                <p class="footer-desc">Great coffee, good vibes and memorable moments. Brewed just for you.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="coffee.html">Menu</a></li>
+                    <li><a href="subscriptions.html">Our Story</a></li>
+                    <li><a href="events.html">Locations</a></li>
+                    <li><a href="cart.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Information</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Franchise</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Support</h4>
+                <p>+1 (123) 456-7890</p>
+                <p>hello@beanboutique.com</p>
+                <p>Mon - Sun: 7:00 AM - 9:00 PM</p>
+            </div>
+            <div class="footer-col">
+                <h4>Download Our App</h4>
+                <div class="app-badges">
+                    <div class="app-badge">App Store</div>
+                    <div class="app-badge">Google Play</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <p>&copy; 2026 Bean Boutique Coffee Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function loadCart() {
+            let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+            let container = document.getElementById('cartItemsContainer');
+            let subtotalEl = document.getElementById('cartSubtotal');
+            let totalEl = document.getElementById('cartTotal');
+
+            container.innerHTML = '';
+
+            if (cart.length === 0) {
+                container.innerHTML = '<p style="color: #546e7a;">Your cart is empty. Browse our <a href="coffee.html" style="color: #1976d2;">Coffee Selection</a> or <a href="equipment.html" style="color: #1976d2;">Equipment</a>.</p>';
+                subtotalEl.innerText = '$0.00';
+                totalEl.innerText = '$0.00';
+                return;
+            }
+
+            let subtotal = 0;
+            cart.forEach((item, index) => {
+                subtotal += item.price * item.quantity;
+                let itemDiv = document.createElement('div');
+                itemDiv.style.cssText = 'display: flex; justify-content: space-between; align-items: center; background: #ffffff; border: 1px solid #bbdefb; padding: 15px; border-radius: 8px; margin-bottom: 10px;';
+                itemDiv.innerHTML = `
+                    <div>
+                        <h4 style="color: #0d47a1; font-size: 16px; margin-bottom: 4px;">${item.name}</h4>
+                        <p style="color: #546e7a; font-size: 13px;">Price: $${item.price.toFixed(2)}</p>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <span style="font-weight: bold; color: #0d47a1;">Qty: ${item.quantity}</span>
+                        <button onclick="removeItem(${index})" style="background: #ff5252; color: white; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer;"><i class="fas fa-trash"></i></button>
+                    </div>
+                `;
+                container.appendChild(itemDiv);
+            });
+
+            subtotalEl.innerText = '$' + subtotal.toFixed(2);
+            totalEl.innerText = '$' + subtotal.toFixed(2);
+        }
+
+        function removeItem(index) {
+            let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cartItems', JSON.stringify(cart));
+            loadCart();
+        }
+
+        function checkout() {
+            let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+            if (cart.length === 0) {
+                alert('Your cart is empty!');
+                return;
+            }
+            alert('Order placed successfully! Thank you for shopping with Bean Boutique.');
+            localStorage.removeItem('cartItems');
+            loadCart();
+        }
+
+        window.onload = loadCart;
+    </script>
+    </body>
+</html>

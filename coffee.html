@@ -1,0 +1,395 @@
+<html>
+    <head>
+        <title>Bean Boutique - Coffee Selection</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+        <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+        <img src="Image/logo.jpg" alt="Coffee Logo" style="width: 35px; height: 35px; object-fit: contain;">
+        <span>Bean Boutique</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coffee.html" class="active">Coffee Selection</a></li>
+                <li><a href="equipment.html">Brewing Equipment</a></li>
+                <li><a href="cart.html">Shopping Cart</a></li>
+                <li><a href="events.html">Events & Workshops</a></li>
+                <li><a href="subscriptions.html">Subscriptions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main-top-section">
+        <div class="main-text-side">
+            <span class="sub-title">PREMIUM COFFEE SELECTION</span>
+            <h1>Explore Our Finest<br>Coffee Collection</h1>
+            <p>Carefully sourced from renowned origins worldwide, offering rich flavors, delicate aromas, and exceptional quality for every coffee lover.</p>
+            <div class="main-btn-group">
+                <a href="#coffeeGrid" class="btn-primary">Browse All Coffees</a>
+            </div>
+            
+            <div class="feature-icons-row">
+                <div class="f-item">
+                    <span>☕</span>
+                    <p>Single Origin</p>
+                </div>
+                <div class="f-item">
+                    <span>🌟</span>
+                    <p>Artisan Blends</p>
+                </div>
+                <div class="f-item">
+                    <span>🌿</span>
+                    <p>100% Arabica</p>
+                </div>
+                <div class="f-item">
+                    <span>✨</span>
+                    <p>Freshly Ground</p>
+                </div>
+            </div>
+        </div>
+        <div class="main-image-side">
+            <img src="Image/coffee main.jpg" alt="Aesthetic Coffee Cup">
+        </div>
+    </section>
+
+    <main class="main-content-wrapper">
+        <section class="filter-section">
+            <div class="search-bar">
+                <input type="text" id="coffeeSearch" placeholder="Search by coffee name, origin, or flavor notes...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Coffees</button>
+                <button class="filter-btn" data-filter="single-origin">Single Origin</button>
+                <button class="filter-btn" data-filter="blends">Signature Blends</button>
+                <button class="filter-btn" data-filter="light-body">Light Body</button>
+                <button class="filter-btn" data-filter="full-body">Full Body</button>
+            </div>
+        </section>
+
+        <!-- Coffee Grid -->
+        <section class="section-block">
+            <div class="section-title-row">
+                <h2>Customers Favourite & Our Premium Beans</h2>
+                <span>Showing all varieties</span>
+            </div>
+            <div class="products-row coffee-grid" id="coffeeGrid">
+                <!-- Customer Favorite 1: Cappuccino -->
+                    <div class="item-card coffee-item blends light-body" data-price="4.25">
+                        <img src="Image/Cappuccino.avif" alt="Cappuccino">
+                        <div class="coffee-details">
+                            <h3>Cappuccino</h3>
+                            <p class="coffee-region">Classic Blend</p>
+                            <p class="coffee-notes">Classic cappuccino with a perfect foam.</p>
+                            <div class="coffee-meta">
+                                <span class="roast-level">Smooth & Balanced</span>
+                                <span class="coffee-weight">Cup</span>
+                            </div>
+                            <div class="price-action">
+                                <span class="price-tag">$4.25</span>
+                                <button class="add-circle-btn" onclick="addToCart('Cappuccino', 4.25)">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Customer Favorite 2: Iced Latte -->
+                    <div class="item-card coffee-item blends light-body" data-price="4.75">
+                        <img src="Image/Ice Latte.jpg" alt="Iced Latte">
+                        <div class="coffee-details">
+                            <h3>Iced Latte</h3>
+                            <p class="coffee-region">Chilled Blend</p>
+                            <p class="coffee-notes">Smooth espresso with cold milk over ice.</p>
+                            <div class="coffee-meta">
+                                <span class="roast-level">Refreshing</span>
+                                <span class="coffee-weight">Cup</span>
+                            </div>
+                            <div class="price-action">
+                                <span class="price-tag">$4.75</span>
+                                <button class="add-circle-btn" onclick="addToCart('Iced Latte', 4.75)">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Customer Favorite 3: Mocha -->
+                    <div class="item-card coffee-item blends full-body" data-price="4.95">
+                        <img src="Image/mocha.jpg" alt="Mocha">
+                        <div class="coffee-details">
+                            <h3>Mocha</h3>
+                            <p class="coffee-region">Sweet Espresso Blend</p>
+                            <p class="coffee-notes">Rich chocolate with espresso and milk.</p>
+                            <div class="coffee-meta">
+                                <span class="roast-level">Rich & Decadent</span>
+                                <span class="coffee-weight">Cup</span>
+                            </div>
+                            <div class="price-action">
+                                <span class="price-tag">$4.95</span>
+                                <button class="add-circle-btn" onclick="addToCart('Mocha', 4.95)">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Customer Favorite 4: Espresso -->
+                    <div class="item-card coffee-item single-origin full-body" data-price="3.25">
+                        <img src="Image/expresso.jpg" alt="Espresso">
+                        <div class="coffee-details">
+                            <h3>Espresso</h3>
+                            <p class="coffee-region">Single Origin - Shot</p>
+                            <p class="coffee-notes">Strong, bold and full of flavor.</p>
+                            <div class="coffee-meta">
+                                <span class="roast-level">Intense Roast</span>
+                                <span class="coffee-weight">Shot</span>
+                            </div>
+                            <div class="price-action">
+                                <span class="price-tag">$3.25</span>
+                                <button class="add-circle-btn" onclick="addToCart('Espresso', 3.25)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                
+                <!-- Coffee Item 1 -->
+                <div class="item-card coffee-item single-origin full-body" data-price="22.00">
+                    <img src="Image/coffee 1.avif" alt="Ethiopia Yirgacheffe">
+                    <div class="coffee-details">
+                        <h3>Ethiopia Yirgacheffe</h3>
+                        <p class="coffee-region">Single Origin - Africa</p>
+                        <p class="coffee-notes">Tasting Notes: Jasmine, Bergamot, Blueberry</p>
+                        <div class="coffee-meta">
+                            <span class="roast-level">Washed Process</span>
+                            <span class="coffee-weight">250g</span>
+                        </div>
+                        <div class="price-action">
+                            <span class="price-tag">$22.00</span>
+                            <button class="add-circle-btn" onclick="addToCart('Ethiopia Yirgacheffe', 22.00)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coffee Item 2 -->
+                <div class="item-card coffee-item blends full-body" data-price="19.50">
+                    <img src="Image/coffee 2.avif" alt="Midnight Velvet Espresso">
+                    <div class="coffee-details">
+                        <h3>Midnight Velvet Espresso</h3>
+                        <p class="coffee-region">Signature Blend - Global Selection</p>
+                        <p class="coffee-notes">Tasting Notes: Dark Chocolate, Molasses, Toasted Walnut</p>
+                        <div class="coffee-meta">
+                            <span class="roast-level">Espresso Profile</span>
+                            <span class="coffee-weight">250g</span>
+                        </div>
+                        <div class="price-action">
+                            <span class="price-tag">$19.50</span>
+                            <button class="add-circle-btn" onclick="addToCart('Midnight Velvet Espresso', 19.50)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coffee Item 3 -->
+                <div class="item-card coffee-item single-origin light-body" data-price="24.00">
+                    <img src="Image/coffee 3.avif" alt="Colombia Huila Supremo">
+                    <div class="coffee-details">
+                        <h3>Colombia Huila Supremo</h3>
+                        <p class="coffee-region">Single Origin - South America</p>
+                        <p class="coffee-notes">Tasting Notes: Red Apple, Caramel, Cane Sugar</p>
+                        <div class="coffee-meta">
+                            <span class="roast-level">Balanced Acidity</span>
+                            <span class="coffee-weight">250g</span>
+                        </div>
+                        <div class="price-action">
+                            <span class="price-tag">$24.00</span>
+                            <button class="add-circle-btn" onclick="addToCart('Colombia Huila Supremo', 24.00)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coffee Item 4 -->
+                <div class="item-card coffee-item blends light-body" data-price="21.00">
+                    <img src="Image/coffee 4.avif" alt="Morning Breeze Breakfast Blend">
+                    <div class="coffee-details">
+                        <h3>Morning Breeze Blend</h3>
+                        <p class="coffee-region">Artisan Blend - Central America & Africa</p>
+                        <p class="coffee-notes">Tasting Notes: Citrus Zest, Milk Chocolate, Almond</p>
+                        <div class="coffee-meta">
+                            <span class="roast-level">Smooth & Bright</span>
+                            <span class="coffee-weight">250g</span>
+                        </div>
+                        <div class="price-action">
+                            <span class="price-tag">$21.00</span>
+                            <button class="add-circle-btn" onclick="addToCart('Morning Breeze Blend', 21.00)">+</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Coffee Item 5 -->
+                <div class="item-card coffee-item single-origin full-body" data-price="23.50">
+                    <img src="Image/coffee 5.jpg" alt="Sumatra Mandheling">
+                    <div class="coffee-details">
+                        <h3>Sumatra Mandheling</h3>
+                        <p class="coffee-region">Single Origin - Asia-Pacific</p>
+                        <p class="coffee-notes">Tasting Notes: Earthy, Cedar, Herbal, Dark Cocoa</p>
+                        <div class="coffee-meta">
+                            <span class="roast-level">Low Acidity</span>
+                            <span class="coffee-weight">250g</span>
+                        </div>
+                        <div class="price-action">
+                            <span class="price-tag">$23.50</span>
+                            <button class="add-circle-btn" onclick="addToCart('Sumatra Mandheling', 23.50)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coffee Item 6 -->
+                <div class="item-card coffee-item single-origin light-body" data-price="25.00">
+                    <img src="Image/coffee 6.avif" alt="Kenya Nyeri Hill">
+                    <div class="coffee-details">
+                        <h3>Kenya Nyeri Hill</h3>
+                        <p class="coffee-region">Single Origin - Africa</p>
+                        <p class="coffee-notes">Tasting Notes: Blackcurrant, Grapefruit, Winey</p>
+                        <div class="coffee-meta">
+                            <span class="roast-level">Juicy & Complex</span>
+                            <span class="coffee-weight">250g</span>
+                        </div>
+                        <div class="price-action">
+                            <span class="price-tag">$25.00</span>
+                            <button class="add-circle-btn" onclick="addToCart('Kenya Nyeri Hill', 25.00)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coffee Item 7 -->
+                <div class="item-card coffee-item single-origin full-body" data-price="22.50">
+                    <img src="Image/coffee 7.jpg" alt="Guatemala Antigua">
+                    <div class="coffee-details">
+                        <h3>Guatemala Antigua</h3>
+                        <p class="coffee-region">Single Origin - Central America</p>
+                        <p class="coffee-notes">Tasting Notes: Cocoa Powder, Spiced Apple, Honey</p>
+                        <div class="coffee-meta">
+                            <span class="roast-level">Velvety Body</span>
+                            <span class="coffee-weight">250g</span>
+                        </div>
+                        <div class="price-action">
+                            <span class="price-tag">$22.50</span>
+                            <button class="add-circle-btn" onclick="addToCart('Guatemala Antigua', 22.50)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coffee Item 8 -->
+                <div class="item-card coffee-item blends light-body" data-price="20.00">
+                    <img src="Image/coffee 8.jpg" alt="Hacienda Sunset Blend">
+                    <div class="coffee-details">
+                        <h3>Hacienda Sunset Blend</h3>
+                        <p class="coffee-region">House Blend - Latin America</p>
+                        <p class="coffee-notes">Tasting Notes: Vanilla Cream, Hazelnut, Brown Sugar</p>
+                        <div class="coffee-meta">
+                            <span class="roast-level">Mellow & Sweet</span>
+                            <span class="coffee-weight">250g</span>
+                        </div>
+                        <div class="price-action">
+                            <span class="price-tag">$20.00</span>
+                            <button class="add-circle-btn" onclick="addToCart('Hacienda Sunset Blend', 20.00)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-brand">Bean Boutique</div>
+                <p class="footer-desc">Great coffee, good vibes and memorable moments. Brewed just for you.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="coffee.html">Menu</a></li>
+                    <li><a href="subscriptions.html">Our Story</a></li>
+                    <li><a href="events.html">Locations</a></li>
+                    <li><a href="cart.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Information</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Franchise</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Support</h4>
+                <p>+1 (123) 456-7890</p>
+                <p>hello@beanboutique.com</p>
+                <p>Mon - Sun: 7:00 AM - 9:00 PM</p>
+            </div>
+            <div class="footer-col">
+                <h4>Download Our App</h4>
+                <div class="app-badges">
+                    <div class="app-badge">App Store</div>
+                    <div class="app-badge">Google Play</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <p>&copy; 2026 Bean Boutique Coffee Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Filtering and Add to Cart -->
+    <script>
+        function addToCart(itemName, itemPrice) {
+            let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+            cart.push({ name: itemName, price: itemPrice, quantity: 1 });
+            localStorage.setItem('cartItems', JSON.stringify(cart));
+            window.location.href = 'cart.html';
+        }
+
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const coffeeItems = document.querySelectorAll('.coffee-item');
+        const searchInput = document.getElementById('coffeeSearch');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelector('.filter-btn.active').classList.remove('active');
+                button.classList.add('active');
+
+                const filter = button.dataset.filter;
+
+                coffeeItems.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        searchInput.addEventListener('keyup', (e) => {
+            const searchString = e.target.value.toLowerCase();
+
+            coffeeItems.forEach(item => {
+                const coffeeName = item.querySelector('h3').innerText.toLowerCase();
+                const coffeeRegion = item.querySelector('.coffee-region').innerText.toLowerCase();
+                const coffeeNotes = item.querySelector('.coffee-notes').innerText.toLowerCase();
+
+                if (coffeeName.includes(searchString) || coffeeRegion.includes(searchString) || coffeeNotes.includes(searchString)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            
+            document.querySelector('.filter-btn.active').classList.remove('active');
+            document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
+        });
+    </script>
+    </body>
+</html>
